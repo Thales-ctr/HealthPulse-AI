@@ -28,7 +28,11 @@ st.markdown("""
         font-family: 'Inter', -apple-system, sans-serif;
     }
 
-    #MainMenu, footer, header { visibility: hidden; }
+    /* Ocultar apenas rodapé e decorações, preservando o botão da barra lateral */
+    #MainMenu { visibility: hidden; }
+    footer { visibility: hidden; }
+    div[data-testid="stDecoration"] { display: none; }
+    div[data-testid="stStatusWidget"] { visibility: hidden; }
 
     /* Header Principal Glassmorphism */
     .clinical-header {
